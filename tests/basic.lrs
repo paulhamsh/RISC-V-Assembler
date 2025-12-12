@@ -1,7 +1,7 @@
 label1:
-0         and	x1, x1, x0           // a comment
+0         and	x1, x1, x0           
 4         lw	x2, 4(x1)             
 8         beq	x1, x2, label2       
 12        sw	x1, 4(x2)             
 label2:
-16        jal	x0,  label2          
+16        jal	x0,  label1          
