@@ -68,11 +68,6 @@ def is_uint(s):
     return s.isnumeric()
 
 
-"""
-def is_int(s):
-    return s.isnumeric() or (s[0] == "-"
-                         and s[1:].isnumeric())
-"""
 def is_int(s):
     try:
         int(s, 0)
