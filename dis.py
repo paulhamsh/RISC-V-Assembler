@@ -373,4 +373,3 @@ for line_no, line in ass:
 if outname1:        
     f1.close()
     f2.close()
-

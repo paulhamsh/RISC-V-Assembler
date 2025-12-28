@@ -67,10 +67,18 @@ import re
 def is_uint(s):
     return s.isnumeric()
 
+
+"""
 def is_int(s):
     return s.isnumeric() or (s[0] == "-"
                          and s[1:].isnumeric())
-
+"""
+def is_int(s):
+    try:
+        int(s, 0)
+        return True
+    except ValueError:
+        return False
 
 def int_to_twos_complement(val, bits):
     if val < 0:
@@ -145,7 +153,7 @@ def tokenise(txt) :
                   and is_uint(c[1:]) ):
                 regC = int(c[1])
             elif value == None  and is_int(c):
-                value = int(c)
+                value = int(c, 0)
             else:
                 jmp_label = c
           
