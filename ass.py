@@ -140,13 +140,13 @@ def tokenise(txt) :
                 cmd = c
             elif (regA == None and c[0] == "x"
                   and is_uint(c[1:]) ):
-                regA = int(c[1])
+                regA = int(c[1:])
             elif (regB == None and c[0] == "x"
                   and is_uint(c[1:]) ):
-                regB = int(c[1])
+                regB = int(c[1:])
             elif (regC == None and c[0] == "x"
                   and is_uint(c[1:]) ):
-                regC = int(c[1])
+                regC = int(c[1:])
             elif value == None  and is_int(c):
                 value = int(c, 0)
             else:
